@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:id="@+id/btnApple"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="-2"
+            android:shadowDy="5"
+            android:shadowRadius="0.0011"
+            android:textColor="@color/white"
+            android:background="@drawable/apple"
+            android:text="ЯБЛОКО"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/block"/>
+
+        <Button
+            android:id="@+id/btnPineapple"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="-2"
+            android:shadowDy="5"
+            android:shadowRadius="0.0011"
+            android:textColor="@color/white"
+            android:background="@drawable/pineapple"
+            android:text="АНАНАС"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/block"/>
+
+        <Button
+            android:id="@+id/btnWatermelon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="-2"
+            android:shadowDy="5"
+            android:shadowRadius="0.0011"
+            android:textColor="@color/white"
+            android:background="@drawable/watermelon"
+            android:text="АРБУЗ"/>
+    </LinearLayout>
+</RelativeLayout>

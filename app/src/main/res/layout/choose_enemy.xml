@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnMedvedka"
+                android:layout_width="105dp"
+                android:layout_height="120dp"
+                android:background="@drawable/enemy1"
+                android:fontFamily="@font/font"
+                android:shadowColor="@color/black"
+                android:shadowDx="-2"
+                android:shadowDy="5"
+                android:shadowRadius="0.01"
+                android:text="МЕДВЕДКА"
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/block"/>
+
+            <Button
+                android:id="@+id/btnTlya"
+                android:layout_width="105dp"
+                android:layout_height="120dp"
+                android:background="@drawable/enemy2"
+                android:fontFamily="@font/font"
+                android:shadowColor="@color/black"
+                android:shadowDx="-2"
+                android:shadowDy="5"
+                android:shadowRadius="0.0011"
+                android:text="ТЛЯ"
+                android:textColor="@color/white"
+                android:textSize="50sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="175dp"
+                android:layout_height="120dp"
+                android:fontFamily="@font/font"
+                android:text="@string/manual_medvedka2"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/block2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/block" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="175dp"
+                android:layout_height="120dp"
+                android:fontFamily="@font/font"
+                android:text="@string/manual_tlya2"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btnStartMedvedka"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:background="@drawable/video" />
+
+            <TextView
+                android:id="@+id/block3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/block"/>
+
+            <Button
+                android:id="@+id/btnStartTlya"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:background="@drawable/video"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
