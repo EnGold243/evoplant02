@@ -1,59 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background2">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/btnApple"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:shadowColor="@color/black"
-            android:shadowDx="-2"
-            android:shadowDy="5"
-            android:shadowRadius="0.0011"
-            android:textColor="@color/white"
-            android:background="@drawable/apple"
-            android:text="ЯБЛОКО"/>
-
-        <TextView
-            android:layout_width="match_parent"
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/block"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/btnPineapple"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:shadowColor="@color/black"
-            android:shadowDx="-2"
-            android:shadowDy="5"
-            android:shadowRadius="0.0011"
-            android:textColor="@color/white"
-            android:background="@drawable/pineapple"
-            android:text="АНАНАС"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
+                <Button
+                    android:id="@+id/btnApple"
+                    android:layout_width="105dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/apple"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="-2"
+                    android:shadowDy="5"
+                    android:shadowRadius="0.0011"
+                    android:text="ЯБЛОКО"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/block" />
+
+                <Button
+                    android:id="@+id/btnPineapple"
+                    android:layout_width="105dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/pineapple"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="-2"
+                    android:shadowDy="5"
+                    android:shadowRadius="0.0011"
+                    android:text="АНАНАС"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/block" />
+
+                <Button
+                    android:id="@+id/btnWatermelon"
+                    android:layout_width="105dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/watermelon"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="-2"
+                    android:shadowDy="5"
+                    android:shadowRadius="0.0011"
+                    android:text="АРБУЗ"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/block"/>
+            app:layout_constraintStart_toEndOf="@+id/scrollView2"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/btnWatermelon"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:shadowColor="@color/black"
-            android:shadowDx="-2"
-            android:shadowDy="5"
-            android:shadowRadius="0.0011"
-            android:textColor="@color/white"
-            android:background="@drawable/watermelon"
-            android:text="АРБУЗ"/>
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textApple"
+                    android:layout_width="175dp"
+                    android:layout_height="120dp"
+                    android:fontFamily="@font/font"
+                    android:text="@string/text_apple"
+                    android:textColor="@color/white"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/block" />
+
+                <TextView
+                    android:id="@+id/textPineapple"
+                    android:layout_width="175dp"
+                    android:layout_height="120dp"
+                    android:fontFamily="@font/font"
+                    android:text="@string/text_pineapple"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/block2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/block" />
+
+                <TextView
+                    android:id="@+id/textWatermelon"
+                    android:layout_width="175dp"
+                    android:layout_height="120dp"
+                    android:fontFamily="@font/font"
+                    android:text="@string/text_watermelon"
+                    android:textColor="@color/white"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </RelativeLayout>

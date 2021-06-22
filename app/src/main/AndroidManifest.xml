@@ -21,6 +21,10 @@
         <activity android:name="gold.experience.DefNGrowPlant.ChoosePlant"/>
         <activity android:name="gold.experience.DefNGrowPlant.EnemyMedvedka" android:label="МЕДВЕДКА"/>
         <activity android:name="gold.experience.DefNGrowPlant.EnemyTlya" android:label="ТЛЯ"/>
+        <activity android:name="gold.experience.DefNGrowPlant.PlantApple" android:label="Яблоко"/>
+        <activity android:name="gold.experience.DefNGrowPlant.PlantPineapple" android:label="АНАНАС"/>
+        <activity android:name="gold.experience.DefNGrowPlant.PlantWatermelon" android:label="АРБУЗ"/>
+
     </application>
 
 </manifest>

@@ -43,6 +43,7 @@ public class ChooseEnemy extends AppCompatActivity {
                 case R.id.btnTlya:
                     Intent enemy2 = new Intent(ChooseEnemy.this, EnemyTlya.class);
                     startActivity(enemy2);
+                    break;
                 case R.id.btnStartMedvedka:
                     videoPlayer(R.raw.medvedka);
                     break;

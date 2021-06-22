@@ -33,6 +33,7 @@ public class EnemyMedvedka extends AppCompatActivity {
 
         Button hint = findViewById(R.id.hint);
         Button btnAnimation = findViewById(R.id.Animation);
+        Button btnAnimation2 = findViewById(R.id.Animation2);
 
         frame1 = findViewById(R.id.imageView);
         frame2 = findViewById(R.id.imageView2);
@@ -40,6 +41,7 @@ public class EnemyMedvedka extends AppCompatActivity {
 
         hint.setOnClickListener(OnClick);
         btnAnimation.setOnClickListener(OnClick);
+        btnAnimation2.setOnClickListener(OnClick);
     }
 
     View.OnClickListener OnClick = new View.OnClickListener() {
@@ -51,6 +53,7 @@ public class EnemyMedvedka extends AppCompatActivity {
                     manual.show();
                     break;
                 case R.id.Animation:
+                    frame3.setBackground(getResources().getDrawable(R.drawable.bait_frame_0));
                     animation(frame1, frame2, frame3, R.drawable.madvedka_walk, R.drawable.madvedka_walk, R.drawable.bait_frame_1);
                     new CountDownTimer(1000, 1000) {
                         @Override
@@ -58,6 +61,17 @@ public class EnemyMedvedka extends AppCompatActivity {
                         @Override
                         public void onFinish() {
                             animation(frame3, frame3, frame3, R.drawable.bait_medvedka, R.drawable.bait_fire, R.drawable.bait_end);
+                        }
+                    }.start();
+                    break;
+                case R.id.Animation2:
+                    animation(frame1, frame2, frame3, R.drawable.madvedka_walk, R.drawable.madvedka_walk, R.drawable.madvedka_walk);
+                    new CountDownTimer(1000, 1000) {
+                        @Override
+                        public void onTick(long millisUntilFinished) {}
+                        @Override
+                        public void onFinish() {
+                            //animation(frame3,frame3,frame3, R.drawable.medvedka_is_dead, R.drawable.medvedka_is_dead, R.drawable.medvedla_is_dead_0);
                         }
                     }.start();
                     break;
@@ -69,8 +83,6 @@ public class EnemyMedvedka extends AppCompatActivity {
     public void animation(ImageView first, ImageView second, ImageView thirsd, int res, int res2, int res3) {
         if(first != second && second != thirsd){
         first.setBackground(getDrawable(res));
-        second.setBackground(null);
-        thirsd.setBackground(null);
         final AnimationDrawable[] animation = {(AnimationDrawable) first.getBackground()};
         animation[0].start();
 
@@ -94,9 +106,16 @@ public class EnemyMedvedka extends AppCompatActivity {
                         animation[0].stop();
                         second.setBackground(null);
                         thirsd.setBackground(getDrawable(res3));
+                        new CountDownTimer(1000, 1000) {
+                            @Override
+                            public void onTick(long millisUntilFinished) {}
+                            @Override
+                            public void onFinish() {
+                                thirsd.setBackground(null);
+                            }
+                        }.start();
                     }
                 }.start();
-
             }
         }.start(); }
         else {
@@ -122,9 +141,16 @@ public class EnemyMedvedka extends AppCompatActivity {
                         public void onFinish() {
                             animation[0].stop();
                             thirsd.setBackground(getDrawable(res3));
+                            new CountDownTimer(1000, 1000) {
+                                @Override
+                                public void onTick(long millisUntilFinished) {}
+                                @Override
+                                public void onFinish() {
+                                    thirsd.setBackground(null);
+                                }
+                            }.start();
                         }
                     }.start();
-
                 }
             }.start();
         }

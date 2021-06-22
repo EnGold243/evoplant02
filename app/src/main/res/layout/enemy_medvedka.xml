@@ -53,4 +53,11 @@
         android:translationX="-60dp"
         android:translationY="150dp" />
 
+    <Button
+        android:id="@+id/Animation2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Animation"
+        android:text="МЕТОД 2. ПТИЦА" />
+
 </RelativeLayout>
