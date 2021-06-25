@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class EnemyMedvedka extends AppCompatActivity {
 
     private Dialog manual;
+    Button hint, btnAnimation, btnAnimation2;
     ImageView frame1, frame2, frame3;
 
     @Override
@@ -31,9 +32,9 @@ public class EnemyMedvedka extends AppCompatActivity {
         title.setText("КАК УБРАТЬ МЕДВЕДКУ");
         text.setText(R.string.manual_medvedka);
 
-        Button hint = findViewById(R.id.hint);
-        Button btnAnimation = findViewById(R.id.Animation);
-        Button btnAnimation2 = findViewById(R.id.Animation2);
+        hint = findViewById(R.id.hint);
+        btnAnimation = findViewById(R.id.Animation);
+        btnAnimation2 = findViewById(R.id.Animation2);
 
         frame1 = findViewById(R.id.imageView);
         frame2 = findViewById(R.id.imageView2);
@@ -53,6 +54,7 @@ public class EnemyMedvedka extends AppCompatActivity {
                     manual.show();
                     break;
                 case R.id.Animation:
+                    btnAnimation.setEnabled(false);
                     frame3.setBackground(getResources().getDrawable(R.drawable.bait_frame_0));
                     animation(frame1, frame2, frame3, R.drawable.madvedka_walk, R.drawable.madvedka_walk, R.drawable.bait_frame_1);
                     new CountDownTimer(1000, 1000) {
@@ -61,6 +63,7 @@ public class EnemyMedvedka extends AppCompatActivity {
                         @Override
                         public void onFinish() {
                             animation(frame3, frame3, frame3, R.drawable.bait_medvedka, R.drawable.bait_fire, R.drawable.bait_end);
+                            btnAnimation.setEnabled(true);
                         }
                     }.start();
                     break;

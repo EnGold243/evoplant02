@@ -12,14 +12,13 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/hint"
-        android:onClick="ax"
-        android:text="" />
+        android:onClick="hint" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/hint"
-        android:text="⬅прочитайте" />
+        android:text="ИНСТРУКЦИЯ" />
 
     <Button
         android:id="@+id/Animation"
