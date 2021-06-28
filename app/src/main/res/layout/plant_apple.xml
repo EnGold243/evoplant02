@@ -3,24 +3,14 @@
     android:id="@+id/back"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clickable="true"
-    android:onClick="bb"
     android:background="@drawable/plain">
-
-    <Button
-        android:id="@+id/hint"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@drawable/hint"
-        android:visibility="invisible"
-        android:onClick="hint" />
 
     <Button
         android:id="@+id/action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/hint"
         android:onClick="Action"
+        android:layout_alignParentBottom="true"
         android:text="посадить сажанец" />
 
 </RelativeLayout>

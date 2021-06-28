@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/pineapple_seed_7" android:duration="250"/>
+    <item android:drawable="@drawable/pineapple_seed_8" android:duration="250"/>
+</animation-list>
