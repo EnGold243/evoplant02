@@ -50,6 +50,7 @@ public class ChoosePlant extends AppCompatActivity {
                 case R.id.btnWatermelon:
                     Intent watermelon = new Intent(ChoosePlant.this, PlantWatermelon.class);
                     startActivity(watermelon);
+                    break;
                 case R.id.hintApple:
                     manual = new Dialog(ChoosePlant.this);
                     manual.setContentView(R.layout.manual);
