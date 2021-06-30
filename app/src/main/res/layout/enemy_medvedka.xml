@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/hint"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:background="@drawable/hint"
         android:onClick="hint" />
 
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/hint"
-        android:text="метод 1. Приманка" />
+        android:text="метод 1.Приманка" />
 
     <ImageView
         android:id="@id/imageView"
@@ -51,12 +51,5 @@
         android:layout_centerInParent="true"
         android:translationX="-60dp"
         android:translationY="150dp" />
-
-    <Button
-        android:id="@+id/Animation2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/Animation"
-        android:text="МЕТОД 2. ПТИЦА" />
 
 </RelativeLayout>

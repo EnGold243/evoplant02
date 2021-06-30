@@ -25,12 +25,13 @@ public class PlantWatermelon extends AppCompatActivity {
         actionWatermelon =  findViewById(R.id.watermelonAction);
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     public void watermelonAction(View view) {
         countClickBtn++;
         if(countClickBtn == 1){
             actionWatermelon.setEnabled(false);
             backWatermelon.setBackground(getDrawable(R.drawable.watermelon_seed_1));
-            new CountDownTimer(1000,1000){
+            new CountDownTimer(500,1000){
                 @Override
                 public void onTick(long millisUntilFinished) { }
 
@@ -43,16 +44,31 @@ public class PlantWatermelon extends AppCompatActivity {
             }.start();
         }
         else if(countClickBtn == 2){
-            actionWatermelon.setEnabled(false);
-            animation(backWatermelon, backWatermelon, backWatermelon, R.drawable.watermelon_seed_34, R.drawable.watermelon_seed_34, R.drawable.watermelon_seed_5);
-            new CountDownTimer(1950,1000) {
-                @Override
-                public void onTick(long millisUntilFinished) { }
 
+            animation(backWatermelon, backWatermelon, backWatermelon, R.drawable.watermelon_seed_34, R.drawable.watermelon_seed_34, R.drawable.watermelon_seed_5);
+            new CountDownTimer(1000,1000) {
+                @Override
+                public void onTick(long millisUntilFinished) {
+                }
                 @Override
                 public void onFinish() {
                     actionWatermelon.setEnabled(true);
-                    animation(backWatermelon, backWatermelon, backWatermelon, R.drawable.watermelon_seed_67, R.drawable.watermelon_seed_67, R.drawable.watermelon_seed_8);
+                    actionWatermelon.setText("дождаться созревания");
+                }
+            }.start();
+
+        }
+        else if ( countClickBtn == 3){
+            actionWatermelon.setEnabled(false);
+            animation(backWatermelon, backWatermelon, backWatermelon, R.drawable.watermelon_seed_67, R.drawable.watermelon_seed_67, R.drawable.watermelon_seed_8);
+
+            new CountDownTimer(1000,1000) {
+                @Override
+                public void onTick(long millisUntilFinished) {
+                }
+                @Override
+                public void onFinish() {
+                    actionWatermelon.setEnabled(true);
                     actionWatermelon.setText("Хотите начать заново?");
                 }
             }.start();

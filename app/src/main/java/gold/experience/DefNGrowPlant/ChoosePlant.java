@@ -71,7 +71,7 @@ public class ChoosePlant extends AppCompatActivity {
                     TextView text2 = (TextView) manual.findViewById(R.id.text);
 
                     title2.setText("ВЫРАЩИВВАНИЕ АНАНАСА");
-                    text2.setText("l2asdfghj");
+                    text2.setText(R.string.manual_pineapple);
                     manual.show();
                     break;
                 case R.id.hintWatermelon:
@@ -83,7 +83,7 @@ public class ChoosePlant extends AppCompatActivity {
                     TextView text3 = (TextView) manual.findViewById(R.id.text);
 
                     title3.setText("ВЫРАЩИВВАНИЕ АРБУЗА");
-                    text3.setText("lasdfghjk");
+                    text3.setText(R.string.manual_watermelon);
                     manual.show();
                     break;
             }
