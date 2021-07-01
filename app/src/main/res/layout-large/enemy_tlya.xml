@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:id="@+id/backTlya"
+    android:background="@drawable/tlya_defens_1"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/hintTlya"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:background="@drawable/hint"/>
+
+    <Button
+        android:id="@+id/actionTlya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hintTlya"
+        android:textSize="70dp"
+        android:text="взять мыло и растворить его" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/hintTlya"
+        android:textSize="70dp"
+        android:text="Инструкция" />
+
+</RelativeLayout>

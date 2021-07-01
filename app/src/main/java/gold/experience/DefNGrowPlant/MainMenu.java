@@ -1,15 +1,19 @@
 package gold.experience.DefNGrowPlant;
 
-import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainMenu extends AppCompatActivity {
+
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +24,21 @@ public class MainMenu extends AppCompatActivity {
         music.setLooping(true);
         music.start();
 
+        FirebaseApp.initializeApp(this);
+        firebaseAuth = firebaseAuth.getInstance();
 
+        firebaseAuth.signInAnonymously().addOnCompleteListener(task -> {
+           if (task.isSuccessful()){
+               FirebaseUser user = firebaseAuth.getCurrentUser();
+           }
+        });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
     }
 
     public void toChooseEnemy(View view) {

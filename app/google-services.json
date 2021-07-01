@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "401966988088",
+    "project_id": "evoplant-243",
+    "storage_bucket": "evoplant-243.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401966988088:android:6707fb42787a420dd4dfcd",
+        "android_client_info": {
+          "package_name": "gold.experience.protectplant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401966988088-r464tp2tv466s8q9ejenm70d1p2uuq72.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrGgFIpk62MFyN9gCwJOgaG-eKNoa4B0U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401966988088-r464tp2tv466s8q9ejenm70d1p2uuq72.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

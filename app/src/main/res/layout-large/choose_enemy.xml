@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHeight_percent="2"
+            app:layout_constraintWidth_percent="2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnMedvedka"
+                    android:layout_width="205dp"
+                    android:layout_height="220dp"
+                    android:background="@drawable/enemy1"
+                    android:fontFamily="@font/font"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="-4"
+                    android:shadowDy="7"
+                    android:shadowRadius="0.5"
+                    android:textSize="70sp"
+                    android:text="МЕДВЕДКА"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/block"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/block" />
+
+                <Button
+                    android:id="@+id/btnTlya"
+                    android:layout_width="205dp"
+                    android:layout_height="220dp"
+                    android:background="@drawable/enemy2"
+                    android:fontFamily="@font/font"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="-4"
+                    android:shadowDy="7"
+                    android:shadowRadius="0.5"
+                    android:textSize="70sp"
+                    android:text="ТЛЯ"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/scrollView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHeight_percent="2"
+            app:layout_constraintWidth_percent="2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="275dp"
+                    android:layout_height="220dp"
+                    android:fontFamily="@font/font"
+                    android:text="@string/text_medvedka"
+                    android:textColor="@color/white"
+                    android:textSize="37sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/block2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/block" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="275dp"
+                    android:layout_height="220dp"
+                    android:fontFamily="@font/font"
+                    android:text="@string/text_tlya"
+                    android:textColor="@color/white"
+                    android:textSize="37sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHeight_percent="2"
+            app:layout_constraintWidth_percent="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnStartMedvedka"
+                    android:layout_width="210dp"
+                    android:layout_height="220dp"
+                    android:background="@drawable/video" />
+
+                <TextView
+                    android:id="@+id/block3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/block" />
+
+                <Button
+                    android:id="@+id/btnStartTlya"
+                    android:layout_width="210dp"
+                    android:layout_height="220dp"
+                    android:background="@drawable/video" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

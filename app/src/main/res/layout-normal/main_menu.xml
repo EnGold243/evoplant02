@@ -18,7 +18,7 @@
         android:shadowDy="2"
         android:shadowRadius="0.0011"
         android:textSize="60sp"/>
-
+t
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,6 +26,9 @@
         android:layout_above="@id/ChooseEnemy"
         android:background="@color/black2"
         android:textColor="@color/white"
+        android:translationY="-15dp"
+        android:padding="6dp"
+        android:textSize="35sp"
         android:text="ЗДЕСЬ ВЫ НАУЧИТЕСЬ ЗАЩИЩАТЬ \nИ ВЫРАЩИВАТЬ\nСВОИ РАСТЕНИЯ И УЗНАТЬ О ВРАГАХ" />
 
     <Button

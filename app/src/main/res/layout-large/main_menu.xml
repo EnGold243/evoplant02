@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainMenu">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ЗАЩИТА И ВЫРАЩИВАНИЕ\nРАСТЕНИЙ"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:shadowColor="@color/black"
+        android:shadowDx="-2"
+        android:shadowDy="2"
+        android:shadowRadius="0.0011"
+        android:textSize="60sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/ChooseEnemy"
+        android:background="@color/black2"
+        android:textColor="@color/white"
+        android:translationY="-25dp"
+        android:textSize="60sp"
+        android:padding="20sp"
+        android:text="ЗДЕСЬ ВЫ НАУЧИТЕСЬ ЗАЩИЩАТЬ \nИ ВЫРАЩИВАТЬ\nСВОИ РАСТЕНИЯ И УЗНАТЬ О ВРАГАХ" />
+
+    <Button
+        android:id="@+id/ChooseEnemy"
+        android:layout_width="351dp"
+        android:layout_height="170dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/btnback"
+        android:onClick="toChooseEnemy"
+        android:shadowColor="@color/black"
+        android:shadowDx="-4"
+        android:shadowDy="7"
+        android:shadowRadius="0.5"
+        android:textColor="@color/white"
+        android:text="Узнать защиту"
+        android:textSize="70sp" />
+
+    <Button
+        android:id="@+id/choosePlant"
+        android:layout_width="351dp"
+        android:layout_height="170dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/ChooseEnemy"
+        android:translationY="20dp"
+        android:onClick="toChoosePlant"
+        android:background="@drawable/btnback"
+        android:shadowColor="@color/black"
+        android:shadowDx="-4"
+        android:shadowDy="7"
+        android:shadowRadius="0.5"
+        android:textColor="@color/white"
+        android:text="УЗНАТЬ КАК ВЫРАШИВАТЬ"
+        android:textSize="70sp"  />
+
+</RelativeLayout>
