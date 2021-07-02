@@ -67,33 +67,35 @@ public class PlantPineapple extends AppCompatActivity {
     }
     @SuppressLint("UseCompatLoadingForDrawables")
     public void animation(RelativeLayout first, RelativeLayout second, RelativeLayout thirsd, int res, int res2, int res3) {
-            first.setBackground(getDrawable(res));
-            final AnimationDrawable[] animation = {(AnimationDrawable) first.getBackground()};
-            animation[0].start();
+        first.setBackground(getDrawable(res));
+        final AnimationDrawable[] animation = {(AnimationDrawable) first.getBackground()};
+        animation[0].start();
 
-            new CountDownTimer(450, 1000) {
-                @Override
-                public void onTick(long millisUntilFinished) {
-                }
+        new CountDownTimer(450, 1000){
+            @Override
+            public void onTick(long millisUntilFinished) {
 
-                @Override
-                public void onFinish() {
-                    animation[0].stop();
-                    second.setBackground(getDrawable(res2));
-                    animation[0] = (AnimationDrawable) second.getBackground();
-                    animation[0].start();
-                    new CountDownTimer(450, 1000) {
-                        @Override
-                        public void onTick(long millisUntilFinished) {
-                        }
+            }
 
-                        @Override
-                        public void onFinish() {
-                            animation[0].stop();
-                            thirsd.setBackground(getDrawable(res3));
-                        }
-                    }.start();
-                }
-            }.start();
-        }
+            @Override
+            public void onFinish() {
+                animation[0].stop();
+                second.setBackground(getDrawable(res2));
+                animation[0] = (AnimationDrawable) second.getBackground();
+                animation[0].start();
+                new CountDownTimer(450, 1000) {
+                    @Override
+                    public void onTick(long millisUntilFinished) {
+
+                    }
+
+                    @Override
+                    public void onFinish() {
+                        animation[0].stop();
+                        thirsd.setBackground(getDrawable(res3));
+                    }
+                }.start();
+            }
+        }.start();
+    }
 }

@@ -3,6 +3,7 @@ package gold.experience.DefNGrowPlant;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainMenu extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,22 +26,33 @@ public class MainMenu extends AppCompatActivity {
         music.setLooping(true);
         music.start();
 
+        sharedPreferences = getSharedPreferences("LOGIN", MODE_PRIVATE);
+        String checkLogin = sharedPreferences.getString("LOGIN", "");
+
+        if(!checkLogin.equals("isLogined")){
+
         FirebaseApp.initializeApp(this);
-        firebaseAuth = firebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
 
-        firebaseAuth.signInAnonymously().addOnCompleteListener(task -> {
-           if (task.isSuccessful()){
-               FirebaseUser user = firebaseAuth.getCurrentUser();
-           }
-        });
-    }
+        firebaseAuth.signInAnonymously()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()){
+                        FirebaseUser user = firebaseAuth.getCurrentUser();
 
-    @Override
-    protected void onStart() {
-        super.onStart();
+                        sharedPreferences = getSharedPreferences("LOGIN", MODE_PRIVATE);
+                        SharedPreferences.Editor ed = sharedPreferences.edit();
+                        ed.putString("LOGIN", "isLogined");
+                        ed.apply();
+                    }
+                });
+    }}
 
-        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
-    }
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//
+//        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+//    }
 
     public void toChooseEnemy(View view) {
         Intent activity_transition1 = new Intent(MainMenu.this, ChooseEnemy.class);
