@@ -47,13 +47,6 @@ public class MainMenu extends AppCompatActivity {
                 });
     }}
 
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//
-//        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
-//    }
-
     public void toChooseEnemy(View view) {
         Intent activity_transition1 = new Intent(MainMenu.this, ChooseEnemy.class);
         startActivity(activity_transition1);

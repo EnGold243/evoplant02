@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background3">
+    android:background="@drawable/background3"
+    tools:ignore="MissingDefaultResource">
 
     <Button
         android:id="@+id/hint"
         android:layout_width="170dp"
         android:layout_height="170dp"
-        android:background="@drawable/hint"
-        android:onClick="hint" />
+        android:background="@drawable/hint"/>
 
     <TextView
         android:layout_width="wrap_content"
