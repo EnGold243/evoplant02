@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class EnemyMedvedka extends AppCompatActivity {
 
     private Dialog manual;
-    Button hint, btnAnimation, btnAnimation2;
+    Button hint, btnAnimation;
     ImageView frame1, frame2, frame3;
 
     @Override
